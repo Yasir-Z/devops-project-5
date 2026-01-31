@@ -25,3 +25,7 @@ jobs:
    
       - name: Static analysis
         run: bandit . -r --skip B101,B102
+
+      - name: Build Docker image
+        run: |
+          docker build -t devops-project-5:latest

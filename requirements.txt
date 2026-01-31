@@ -1,5 +1,6 @@
 flask
-black     #Formatting test
-flake8    #Lint testing
-bandit    #static analysis 
-pytest    #unit testing
+black
+flake8
+bandit
+pytest
+mypy
