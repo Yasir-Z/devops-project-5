@@ -10,10 +10,18 @@ jobs:
 
 
       - name: Python setup
-        uses: actions/python@v4
+        uses: actions/setup-python@v4
         with:
           python-version: '3.12'
 
       - name: Install dependcies
         run: pip install -r requirements.txt
-      
+     
+      - name: Code formatting 
+        run: black .
+    
+      - name: Lint test
+        run: flack8 .
+   
+      - name: Static analysis
+        run: bandit . -r 
