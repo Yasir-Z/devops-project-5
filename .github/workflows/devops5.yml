@@ -21,7 +21,7 @@ jobs:
         run: black .
     
       - name: Lint test
-        run: flack8 .
+        run: flake .
    
       - name: Static analysis
         run: bandit . -r 
