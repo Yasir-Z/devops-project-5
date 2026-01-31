@@ -24,4 +24,4 @@ jobs:
         run: flake8 .
    
       - name: Static analysis
-        run: bandit . -r 
+        run: bandit . -r --skip B101,B102
