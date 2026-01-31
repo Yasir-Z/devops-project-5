@@ -28,4 +28,4 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t devops-project-5:latest
+          docker build -t devops-project-5:latest .
