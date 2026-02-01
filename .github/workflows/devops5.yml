@@ -26,6 +26,11 @@ jobs:
       - name: Static analysis
         run: bandit . -r --skip B101,B102
 
+      - name: Docker login
+        run: |
+          echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login \
+            -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+
       - name: Build Docker image
         run: |
-          docker build -t devops-project-5:latest .
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/devops-project-5:latest .
